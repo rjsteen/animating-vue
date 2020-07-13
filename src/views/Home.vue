@@ -1,9 +1,12 @@
 <template>
-  <div class="home">
+  <div>
     <button @click="toggleModal">Open</button>
-    <div v-if="isOpen" class="modal">
-      <button @click="toggleModal">Close</button>
-    </div>
+
+    <transition name="fade">
+      <div v-if="isOpen" class="modal">
+        <button @click="toggleModal">Close</button>
+      </div>
+    </transition>
   </div>
 </template>
 
